@@ -1,0 +1,126 @@
+@reference "@/assets/tailwind.css";
+
+.ql-toolbar.ql-snow {
+  @apply border border-b-0 py-4 bg-bg-layout rounded-t-md;
+}
+
+.ql-container.ql-snow {
+  @apply border border-t-0 rounded-b-md;
+}
+
+.ql-editor.ql-blank::before {
+  @apply not-italic;
+}
+
+.ql-editor {
+  @apply overflow-y-auto max-h-100 text-left! font-open-sans!;
+}
+
+.ql-editor * {
+  @apply text-left!;
+}
+
+.ql-snow .ql-picker.ql-header .ql-picker-item[data-value="1"]::before {
+  content: "Title";
+}
+
+.ql-snow .ql-picker.ql-header .ql-picker-item[data-value="2"]::before {
+  content: "Heading";
+}
+
+.ql-snow .ql-picker.ql-header .ql-picker-item[data-value="3"]::before {
+  content: "Subheading";
+}
+
+.ql-snow .ql-picker.ql-header .ql-picker-item[data-value="false"]::before {
+  content: "Normal Text";
+}
+
+.ql-snow .ql-picker.ql-header .ql-picker-label[data-value="1"]::before {
+  content: "Title";
+}
+
+.ql-snow .ql-picker.ql-header .ql-picker-label[data-value="2"]::before {
+  content: "Heading";
+}
+
+.ql-snow .ql-picker.ql-header .ql-picker-label[data-value="3"]::before {
+  content: "Subheading";
+}
+
+.ql-snow .ql-picker.ql-header .ql-picker-label:not([data-value])::before {
+  content: "Normal Text";
+}
+
+.ql-snow .ql-picker.ql-header {
+  width: 120px;
+}
+
+.ql-editor h3,
+.description-context h3 {
+  @apply text-2xl! font-bold! leading-8! m-0!;
+}
+
+.ql-editor h2,
+.description-context h {
+  @apply text-xl! font-bold! leading-6! m-0!;
+}
+
+.ql-editor h3,
+.description-context h3 {
+  @apply text-base! font-bold! leading-5! m-0!;
+}
+
+.ql-editor p,
+.description-context p {
+  @apply text-base! leading-5! m-0! mb-2! break-words!;
+}
+
+.ql-editor ul,
+.description-context ul {
+  @apply list-disc! pl-6! mb-2! space-y-1!;
+}
+
+.ql-editor ol,
+.description-context ol {
+  @apply list-decimal! pl-6! mb-2! space-y-1!;
+}
+
+.ql-editor li,
+.description-context li {
+  @apply text-base! leading-5! break-words!;
+}
+
+.ql-editor ul ul,
+.ql-editor ol ul,
+.description-context ul ul,
+.description-context ol ul {
+  @apply list-disc! pl-6! mb-0!;
+}
+
+.ql-editor ul ol,
+.ql-editor ol ol,
+.description-context ul ol,
+.description-context ol ol {
+  @apply list-decimal! pl-6! mb-0!;
+}
+
+.ql-editor strong,
+.description-context strong {
+  @apply font-bold!;
+}
+
+.ql-editor em,
+.description-context em {
+  @apply italic!;
+}
+
+.ql-editor u,
+.description-context u {
+  @apply underline!;
+}
+
+.ql-editor a,
+.description-context a {
+  @apply text-primary! underline! break-all!;
+}
