@@ -1,0 +1,1 @@
+import{y as l,r as n,aI as o,aJ as u}from"./index-B-UUf32G.js";function s(i){const a=n();let t=!1;return l(i,r=>{if(t){t=!1;return}const e=o(r);a.value=e,e&&u(()=>{a.value=new Date(e.getFullYear(),e.getMonth(),e.getDate())})},{immediate:!0}),l(a,r=>{t=!0,i.value=r??void 0}),a}export{s as u};
