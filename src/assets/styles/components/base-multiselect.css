@@ -1,0 +1,9 @@
+@reference "@/assets/tailwind.css";
+
+.p-multiselect .p-multiselect-chip-item .p-chip .p-chip-label {
+  @apply text-primary!;
+}
+
+.p-multiselect-label .p-chip {
+  @apply rounded-lg! bg-light-primary!;
+}
