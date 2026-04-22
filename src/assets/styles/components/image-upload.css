@@ -1,0 +1,55 @@
+@reference "@/assets/tailwind.css";
+
+.image-upload-container {
+  @apply flex flex-col items-center;
+}
+
+.image-wrapper {
+  @apply relative text-center transition-opacity cursor-pointer hover:opacity-80;
+}
+
+.image-wrapper:hover {
+  @apply opacity-80;
+}
+
+.profile-image {
+  @apply object-cover w-[6.6rem] h-[6.6rem] mb-3 border-2 border-gray-200 rounded-full;
+}
+
+.camera-overlay {
+  @apply absolute h-8 w-8 rounded-full top-[88px] left-[35px];
+}
+
+.error-text {
+  @apply text-sm font-normal text-error;
+}
+
+/* Size variants to match BaseInput */
+.error-text.error-text-xs {
+  @apply text-xs;
+}
+
+.error-text.error-text-sm {
+  @apply text-xs;
+}
+
+.error-text.error-text-md {
+  @apply text-sm font-normal text-error;
+}
+
+.error-text.error-text-lg {
+  @apply text-base;
+}
+
+.error-text.error-text-xl {
+  @apply text-lg;
+}
+
+.hidden-input {
+  @apply sr-only;
+}
+
+/* Disabled state */
+.image-wrapper.disabled {
+  @apply opacity-50 cursor-not-allowed;
+}

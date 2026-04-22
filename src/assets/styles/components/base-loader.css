@@ -1,0 +1,37 @@
+@reference "@/assets/tailwind.css";
+
+.loader-backdrop {
+  @apply fixed inset-0 z-[99999] flex items-center justify-center bg-black/50 backdrop-blur-[1px];
+  width: 100vw;
+  height: 100vh;
+  min-height: 100vh;
+}
+
+.loader-backdrop-scoped {
+  @apply absolute inset-0 z-[99999] flex items-center justify-center bg-white/80 backdrop-blur-sm;
+  width: 100%;
+  height: 100%;
+  min-height: 100%;
+}
+
+.loader-container {
+  @apply flex flex-col items-center justify-center gap-4;
+}
+
+.loader-message {
+  @apply text-white text-sm font-medium;
+}
+
+.loader-message-scoped {
+  @apply text-primary text-sm font-medium;
+}
+
+.fade-enter-active,
+.fade-leave-active {
+  @apply duration-200 ease-in transition-opacity;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+  @apply opacity-0;
+}
