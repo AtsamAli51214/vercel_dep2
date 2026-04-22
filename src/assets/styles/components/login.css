@@ -1,0 +1,73 @@
+@reference "@/assets/tailwind.css";
+
+.auth-layout {
+  @apply grid w-full h-screen grid-cols-1 lg:grid-cols-2;
+}
+
+.centered-layout {
+  @apply w-full h-screen flex flex-col place-items-center justify-center p-4;
+}
+
+.logo-container {
+  @apply z-logo;
+}
+
+.logo-container img {
+  @apply w-[5rem] h-[5rem];
+}
+
+.modal-container {
+  @apply flex items-center justify-center h-screen relative bg-white;
+}
+
+.modal {
+  @apply rounded-lg bg-transparent shadow-modal flex flex-col justify-center items-center gap-16 z-10 w-[25rem] min-h-[25rem];
+}
+
+.content-container {
+  @apply flex flex-col items-center w-full gap-10 relative;
+}
+
+.login-visual {
+  @apply relative hidden h-screen overflow-hidden lg:block;
+}
+
+.login-image {
+  @apply object-cover object-right w-auto h-screen;
+}
+
+.gradient-overlay {
+  @apply absolute inset-0 pointer-events-none bg-gradient-to-b from-transparent from-40% to-primary;
+}
+
+.title {
+  @apply font-open-sans font-bold text-3xl tracking-normal text-primary mb-1;
+}
+
+.subtitle {
+  @apply font-open-sans font-medium text-sm text-secondary-color;
+}
+
+.form-container {
+  @apply flex flex-col items-center gap-6;
+}
+
+.form {
+  @apply flex flex-col w-full gap-6 px-2;
+}
+
+.error-message-container {
+  @apply text-center leading-[1.4rem] tracking-normal font-normal font-open-sans;
+}
+
+.forgot-password {
+  @apply w-full text-center;
+}
+
+.forgot-password .forgot-link {
+  @apply text-sm no-underline transition-colors duration-200 text-text-gray;
+}
+
+.forgot-password .forgot-link:hover {
+  @apply text-primary;
+}
