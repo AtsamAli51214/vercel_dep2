@@ -1,0 +1,60 @@
+.p-datatable-tbody > tr > td {
+  @apply border-none!;
+}
+
+.p-datatable-row-expansion > td {
+  @apply p-0! pl-2! pb-1!;
+}
+
+.card-title {
+  @apply text-2xl! font-bold! text-primary!;
+}
+
+small.p-invalid,
+.p-inputicon.p-invalid {
+  @apply text-red-500!;
+}
+
+.p-inputtext {
+  @apply bg-white!;
+}
+
+.p-button-secondary {
+  @apply bg-white! border-stroke! text-secondary-color!;
+}
+
+.p-button-text {
+  @apply bg-transparent! border-transparent!;
+}
+
+.p-tag {
+  @apply text-xs! font-medium!;
+}
+
+.p-tag-secondary {
+  @apply bg-white! border-stroke! border! text-secondary-color!;
+}
+
+.p-tag-contrast {
+  @apply bg-contrast! text-contrast-text!;
+}
+
+.p-inputtext::placeholder,
+.p-textarea::placeholder,
+input::placeholder,
+.ql-editor.ql-blank::before,
+.p-placeholder {
+  @apply text-stroke!;
+}
+
+.p-autocomplete-chip {
+  @apply bg-light-primary! text-primary! rounded-lg!;
+}
+
+.p-chip-remove-icon {
+  @apply text-primary!;
+}
+
+.p-selectbutton.small-toggeles .p-togglebutton {
+  @apply py-2!;
+}

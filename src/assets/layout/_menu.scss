@@ -1,0 +1,220 @@
+@use "mixins" as *;
+
+.layout-sidebar {
+  position: fixed;
+  width: 15.625rem;
+  height: 100vh;
+  z-index: 999;
+  overflow-y: auto;
+  user-select: none;
+  transition:
+    transform var(--layout-section-transition-duration),
+    left var(--layout-section-transition-duration);
+  background-color: #f5f5f7;
+  border-radius: var(--content-border-radius);
+}
+
+.layout-menu {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+
+  // Root level items - styled like subitems
+  > li {
+    > a,
+    > router-link {
+      display: flex;
+      align-items: center;
+      position: relative;
+      outline: 0 none;
+      color: var(--text-color);
+      cursor: pointer;
+      padding: 0.75rem 1rem 0.75rem 1.75rem;
+      border-radius: var(--content-border-radius);
+      transition:
+        background-color var(--element-transition-duration),
+        box-shadow var(--element-transition-duration);
+      user-select: none;
+
+      .layout-menuitem-icon {
+        margin-right: 0.5rem;
+        position: relative;
+        z-index: 2;
+      }
+
+      .layout-submenu-toggler {
+        font-size: 75%;
+        margin-left: auto;
+        transition: transform var(--element-transition-duration);
+        position: relative;
+        z-index: 2;
+      }
+
+      &.active-route {
+        font-weight: 600;
+        color: var(--primary-color);
+
+        &::before {
+          content: "";
+          position: absolute;
+          left: 0;
+          top: 0;
+          width: 5px;
+          height: 43.19px;
+          background-color: var(--primary-color);
+          border-radius: 0 10px 10px 0;
+          transition: all 0.2s ease;
+          z-index: 1;
+        }
+      }
+
+      &:hover {
+        background-color: var(--surface-hover);
+      }
+
+      &:focus {
+        @include focused-inset();
+      }
+    }
+  }
+
+  li.active-menuitem {
+    > a {
+      .layout-submenu-toggler {
+        transform: rotate(-180deg);
+      }
+    }
+  }
+
+  // Show indicator and primary color ONLY when a child route is active
+  > li.has-active-child {
+    position: relative;
+
+    > a.active-parent {
+      color: var(--primary-color);
+      font-weight: 600;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 5px;
+      height: 43.19px;
+      background-color: var(--primary-color);
+      border-radius: 0 10px 10px 0;
+      transition: all 0.2s ease;
+      z-index: 1;
+    }
+  }
+
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+
+    a {
+      display: flex;
+      align-items: center;
+      position: relative;
+      outline: 0 none;
+      color: var(--text-color);
+      cursor: pointer;
+      font-size: 0.875rem;
+      padding: 0.75rem 1rem 0.75rem 2.75rem;
+      border-radius: var(--content-border-radius);
+      transition:
+        background-color var(--element-transition-duration),
+        box-shadow var(--element-transition-duration);
+
+      .layout-menuitem-icon {
+        margin-right: 0.5rem;
+        position: relative;
+        z-index: 2;
+      }
+
+      .layout-submenu-toggler {
+        font-size: 75%;
+        margin-left: auto;
+        transition: transform var(--element-transition-duration);
+        position: relative;
+        z-index: 2;
+      }
+
+      &.active-route {
+        font-weight: 600;
+        color: var(--primary-color);
+      }
+
+      &:hover {
+        background-color: var(--surface-hover);
+      }
+
+      &:focus {
+        @include focused-inset();
+      }
+    }
+
+    ul {
+      overflow: hidden;
+      border-radius: var(--content-border-radius);
+
+      li {
+        a {
+          padding-left: 3.75rem; // 2.75rem base + 1rem indent
+        }
+
+        li {
+          a {
+            padding-left: 4.75rem; // 2.75rem base + 2rem indent
+          }
+
+          li {
+            a {
+              padding-left: 5.25rem; // 2.75rem base + 2.5rem indent
+            }
+
+            li {
+              a {
+                padding-left: 5.75rem; // 2.75rem base + 3rem indent
+              }
+
+              li {
+                a {
+                  padding-left: 6.25rem; // 2.75rem base + 3.5rem indent
+                }
+
+                li {
+                  a {
+                    padding-left: 6.75rem; // 2.75rem base + 4rem indent
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.layout-submenu-enter-from,
+.layout-submenu-leave-to {
+  max-height: 0;
+}
+
+.layout-submenu-enter-to,
+.layout-submenu-leave-from {
+  max-height: 1000px;
+}
+
+.layout-submenu-leave-active {
+  overflow: hidden;
+  transition: max-height 0.45s cubic-bezier(0, 1, 0, 1);
+}
+
+.layout-submenu-enter-active {
+  overflow: hidden;
+  transition: max-height 1s ease-in-out;
+}
