@@ -1,0 +1,98 @@
+@import "tailwindcss";
+
+@plugin 'tailwindcss-primeui';
+
+@theme {
+  --breakpoint-*: initial;
+  --breakpoint-sm: 576px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 992px;
+  --breakpoint-xl: 1200px;
+  --breakpoint-2xl: 1920px;
+
+  --color-primary: #55417c;
+  --color-primary-50: #a796c8;
+  --color-primary-100: #9581bd;
+  --color-primary-200: #836cb2;
+  --color-primary-300: #7257a6;
+  --color-primary-400: #634c91;
+  --color-primary-500: #55417c;
+  --color-primary-600: #4c3b70;
+  --color-primary-700: #443463;
+  --color-primary-800: #3b2e57;
+  --color-primary-900: #33274a;
+
+  --color-green-50: #f0fdf4;
+  --color-green-100: #dcfce7;
+  --color-green-200: #bbf7d0;
+  --color-green-300: #86efac;
+  --color-green-400: #4ade80;
+  --color-green-500: #22c55e;
+  --color-green-600: #16a34a;
+  --color-green-700: #15803d;
+  --color-green-800: #166534;
+  --color-green-900: #14532d;
+
+  --color-secondary: #fafafa;
+  --color-error: #f23030;
+  --color-success: #22ad5c;
+  --color-success-light: #dcfce7;
+  --color-stroke: #dfe4ea;
+  --color-text-gray: #6b7280;
+  --color-text-dark: #1f2a37;
+  --color-bg-light: #f9fafb;
+  --color-bg-light-white: #ffffff80;
+  --color-text-success: #1a8245;
+  --color-bg-success: #daf8e6;
+  --color-bg-danger: #e29fa2;
+  --color-soft-mist: #eef1f3;
+  --color-snow-drift: #f6f7f9;
+  --color-light-text: #8b8d97;
+  --color-secondary-color: #6c7278;
+  --color-bg-hockey-food: #f3f4f6;
+  --color-secondary-text: #8899a8;
+  --color-primary-text-color: #000000;
+  --color-bg-gray: #f6f6f6;
+  --color-bg-layout: #fafafa;
+  --color-table-header-bg: #f7f9fb;
+  --color-text-1: #364153;
+  --color-text-2: #4a5565;
+  --color-text-3: #959595;
+  --color-light-primary: #dddae3;
+  --color-contrast: #6373811a;
+  --color-contrast-text: #637381;
+
+  --font-body: "Open Sans", sans-serif;
+  --font-open-sans: "Open Sans", sans-serif;
+  --font-inter: "Inter", sans-serif;
+
+  --shadow-modal: 0px 1px 55px -11px rgba(0, 0, 0, 0.01);
+  --shadow-button: 0px 2px 4px rgba(0, 0, 0, 0.1);
+
+  --z-index-logo: 10;
+  --z-index-modal: 20;
+  --z-index-dropdown: 30;
+  --z-index-tooltip: 40;
+
+  --duration-fast: 150ms;
+  --duration-base: 200ms;
+  --duration-slow: 300ms;
+}
+
+@layer utilities {
+  .bg-hockey-food {
+    background: var(--color-bg-hockey-food);
+  }
+}
+
+@layer base {
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    border-color: var(--color-gray-200, currentcolor);
+  }
+}
+
+@import "@/assets/styles/main.css";

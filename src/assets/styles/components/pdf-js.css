@@ -1,0 +1,9 @@
+@reference "@/assets/tailwind.css";
+
+#toolbarContainer {
+  @apply rounded-t-xl!;
+}
+
+.vue-pdfjs .appContainer {
+  @apply rounded-xl!;
+}

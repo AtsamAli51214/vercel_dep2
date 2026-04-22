@@ -1,0 +1,122 @@
+.p-breadcrumb {
+  background-color: transparent !important;
+  padding: 0 !important;
+  overflow: hidden !important;
+}
+
+.p-inputtext:disabled {
+  opacity: 1;
+  background: var(--p-select-disabled-background) !important;
+}
+
+.p-accordion {
+  .p-accordionpanel {
+    border: none !important;
+
+    .p-accordionheader {
+      padding: 1rem 0 !important;
+      color: var(--text-color) !important;
+    }
+
+    .p-accordioncontent-content {
+      padding: 0 !important;
+    }
+  }
+}
+
+.child-tabs.p-tabs,
+.main-tabs.p-tabs {
+  .p-tablist-tab-list,
+  .p-tablist,
+  .p-tabpanels {
+    background: none !important;
+  }
+
+  .p-tablist-tab-list,
+  .p-tab {
+    border: none !important;
+  }
+
+  .p-tabpanels {
+    padding: 0 !important;
+  }
+}
+
+.main-tabs.p-tabs {
+  .p-tablist-tab-list {
+    gap: 12px !important;
+  }
+
+  .p-tabpanels {
+    padding: 0 !important;
+  }
+
+  .p-tab {
+    padding: 10px;
+    color: var(--color-primary) !important;
+    border-radius: 16px 16px 0 0 !important;
+    font-size: 1.125rem !important;
+    font-weight: 500 !important;
+  }
+
+  .p-tab-active {
+    background: var(--color-primary) !important;
+    color: #fff !important;
+  }
+
+  .p-tablist-active-bar {
+    display: none !important;
+  }
+}
+
+.child-tabs.p-tabs {
+  .p-tab {
+    padding: 10px 0 !important;
+    color: var(--color-secondary-color) !important;
+    background: none !important;
+    font-size: 1rem !important;
+    font-weight: 400 !important;
+  }
+
+  .p-tablist-tab-list {
+    gap: 26px !important;
+  }
+
+  .p-tab-active {
+    color: var(--color-primary) !important;
+    font-weight: 600 !important;
+    border-bottom: 2px solid var(--color-primary) !important;
+  }
+}
+
+.p-selectbutton {
+  gap: 8px;
+  .p-togglebutton {
+    border: 1px solid var(--color-stroke) !important;
+    background: none;
+    padding: 12px 16px;
+    border-radius: 6px !important;
+    font-size: 0.875rem;
+    font-weight: 400;
+    color: var(--text-color) !important;
+
+    &:hover {
+      background: none !important;
+      border: 1px solid var(--color-primary-50) !important;
+    }
+
+    &.p-togglebutton-checked {
+      background: none !important;
+      border: 1px solid var(--color-primary-200) !important;
+    }
+
+    .p-togglebutton-content {
+      background: none !important;
+      padding: 0 !important;
+    }
+  }
+}
+
+.p-divider {
+  margin: 0 !important;
+}
